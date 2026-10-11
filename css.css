@@ -1,0 +1,84 @@
+
+:root {
+  --micro-primary: #059669;        /* Verde agar / bacteriano principal */
+  --micro-primary-dark: #047857;   /* Verde oscuro para hovers y bordes */
+  --micro-primary-light: #ecfdf5;  /* Verde muy tenue para fondos de tarjetas */
+  --micro-secondary: #0891b2;      /* Azul microscopio / tinción de Gram */
+  --micro-accent: #14b8a6;         /* Cian/Teal fluorescente (GFP) */
+  
+  --micro-bg-main: #f0fdf4;        /* Fondo general con sutil tono biológico */
+  --micro-bg-card: #ffffff;        /* Fondo de placas / contenedores */
+  --micro-border: #a7f3d0;         /* Bordes tono agar claro */
+  
+  --micro-text-main: #064e3b;      /* Texto principal oscuro tono cultivo */
+  --micro-text-muted: #4b5563;     /* Texto secundario / etiquetas */
+  
+  --micro-success: #10b981;        /* Crecimiento / Colonias óptimas */
+  --micro-warning: #f59e0b;        /* Contaminación potencial */
+  --micro-danger: #ef4444;         /* Inhibición / Patógeno crítico */
+
+  --micro-radius: 12px;            /* Radio moderno y orgánico */
+  --micro-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.08), 0 2px 4px -1px rgba(5, 150, 105, 0.04);
+  --micro-transition: all 0.2s ease-in-out;
+}
+
+/* --- RESET & TIPOGRAFÍA --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--micro-bg-main);
+  color: var(--micro-text-main);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* --- CONTENEDORES Y PLACAS (Tarjetas de Cultivo) --- */
+.micro-card, .card {
+  background: var(--micro-bg-card);
+  border: 1px solid var(--micro-border);
+  border-radius: var(--micro-radius);
+  box-shadow: var(--micro-shadow);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.micro-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--micro-primary-light);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.micro-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--micro-primary-dark);
+  letter-spacing: 0.3px;
+}
+
+/* --- TABLAS DE CONTEO / MUNICIÓN BACTERIANA --- */
+.micro-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--micro-radius);
+  border: 1px solid var(--micro-border);
+  background: var(--micro-bg-card);
+}
+
+table, .micro-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+table th, .micro-table th {
+  background-color: var(--micro-primary-light);
+  color: var(--micro-primary-dark);}
